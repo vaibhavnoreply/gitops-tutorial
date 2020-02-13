@@ -100,7 +100,7 @@ spec:
         - --ssh-keygen-dir=/var/fluxd/keygen
 
         # replace or remove the following URL
-        - --git-url=git@https://github.com:vaibhavnoreply/sampleNodeDocker
+        - --git-url=git@https://github.com:vaibhavnoreply/gitops-tutorial
         - --git-path=deploy/kubernetes
         - --git-branch=master
 
