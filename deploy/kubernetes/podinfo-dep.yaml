@@ -1,17 +1,21 @@
 ---
-apiVersion: apps/v1beta1 # for versions before 1.6.0 use extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: podinfo
+  name: newtest
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: newtest
   template:
     metadata:
       labels:
-        app: podinfo
+        app: newtest
     spec:
       containers:
-      - name: podinfo
-        image: quay.io/stefanprodan/podinfo:3.0.0
-        ports:
-        - containerPort: 3001
+        - name: app
+          image: jainjainjain/newtest:latest
+          ports:
+            - containerPort: 3000
+          imagePullPolicy: Always
