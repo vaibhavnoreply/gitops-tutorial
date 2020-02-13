@@ -17,5 +17,5 @@ spec:
         - name: app
           image: jainjainjain/gitopsnode:1.0.0
           ports:
-            - containerPort: 4000
+            - containerPort: 3000
           imagePullPolicy: Always
