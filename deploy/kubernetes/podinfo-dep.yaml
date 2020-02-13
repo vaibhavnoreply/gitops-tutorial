@@ -2,20 +2,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: newtest
+  name: gitopsnode
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: newtest
+      app: gitopsnode
   template:
     metadata:
       labels:
-        app: newtest
+        app: gitopsnode
     spec:
       containers:
         - name: app
-          image: jainjainjain/newtest:latest
+          image: jainjainjain/gitopsnode:1.0.0
           ports:
-            - containerPort: 3000
+            - containerPort: 4000
           imagePullPolicy: Always
