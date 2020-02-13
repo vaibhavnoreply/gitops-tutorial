@@ -3,6 +3,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: gitopsnode
+  annotations:
+      flux.weave.works/tag.gitopsnode: glob:*
+      flux.weave.works/automated: 'true'
 spec:
   replicas: 1
   selector:
